@@ -15,16 +15,16 @@ from esphome.core import TimePeriodMilliseconds
 CODEOWNERS = ["@habbie"]
 DEPENDENCIES = ["uart"]
 
-pm1006_ns = cg.esphome_ns.namespace("pm1006")
-PM1006Component = pm1006_ns.class_(
-    "PM1006Component", uart.UARTDevice, cg.PollingComponent
+adaq_ns = cg.esphome_ns.namespace("adaq")
+ADAQComponent = adaq_ns.class_(
+    "ADAQComponent", uart.UARTDevice, cg.PollingComponent
 )
 
 
 CONFIG_SCHEMA = cv.All(
     cv.Schema(
         {
-            cv.GenerateID(): cv.declare_id(PM1006Component),
+            cv.GenerateID(): cv.declare_id(ADAQComponent),
             cv.Optional(CONF_PM_2_5): sensor.sensor_schema(
                 unit_of_measurement=UNIT_MICROGRAMS_PER_CUBIC_METER,
                 icon=ICON_BLUR,
@@ -50,7 +50,7 @@ def validate_interval_uart(config):
         require_tx = True
 
     uart.final_validate_device_schema(
-        "pm1006", baud_rate=9600, require_rx=True, require_tx=require_tx
+        "adaq", baud_rate=9600, require_rx=True, require_tx=require_tx
     )(config)
 
 
