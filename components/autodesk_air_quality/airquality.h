@@ -5,7 +5,7 @@
 #include "esphome/components/uart/uart.h"
 
 namespace esphome {
-namespace pm1006 {
+namespace autodesk_air_quality {
 
 class PM1006Component : public PollingComponent, public uart::UARTDevice {
  public:
