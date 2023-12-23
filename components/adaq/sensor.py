@@ -12,7 +12,7 @@ from esphome.const import (
 )
 from esphome.core import TimePeriodMilliseconds
 
-CODEOWNERS = ["@habbie"]
+CODEOWNERS = ["@medievalapple"]
 DEPENDENCIES = ["uart"]
 
 adaq_ns = cg.esphome_ns.namespace("adaq")

@@ -36,6 +36,7 @@ void ADAQComponent::loop() {
     } else if (!*check) {
       // wrong data
       ESP_LOGV(TAG, "Byte %i of received data frame is invalid.", this->data_index_);
+      this->parse_data_();
       this->data_index_ = 0;
     } else {
       // next byte
