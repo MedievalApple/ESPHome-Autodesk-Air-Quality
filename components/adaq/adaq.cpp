@@ -28,6 +28,7 @@ void ADAQComponent::update() {
 void ADAQComponent::loop() {
   while (this->available() != 0) {
     this->read_byte(&this->data_[this->data_index_]);
+    ESP_LOGV(TAG, "What is this: {this}");
     auto check = this->check_byte_();
     if (!check.has_value()) {
       // finished
