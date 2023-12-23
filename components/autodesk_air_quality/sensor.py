@@ -17,7 +17,7 @@ DEPENDENCIES = ["uart"]
 
 pm1006_ns = cg.esphome_ns.namespace("autodesk_air_quality")
 PM1006Component = pm1006_ns.class_(
-    "PM1006Component", uart.UARTDevice, cg.PollingComponent
+    "autodesk_air_qualityComponent", uart.UARTDevice, cg.PollingComponent
 )
 
 
