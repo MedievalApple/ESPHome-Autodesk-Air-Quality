@@ -12,12 +12,12 @@ from esphome.const import (
 )
 from esphome.core import TimePeriodMilliseconds
 
-CODEOWNERS = ["@medievalapple"]
+CODEOWNERS = ["@habbie"]
 DEPENDENCIES = ["uart"]
 
-pm1006_ns = cg.esphome_ns.namespace("autodesk_air_quality")
+pm1006_ns = cg.esphome_ns.namespace("pm1006")
 PM1006Component = pm1006_ns.class_(
-    "autodesk_air_qualityComponent", uart.UARTDevice, cg.PollingComponent
+    "PM1006Component", uart.UARTDevice, cg.PollingComponent
 )
 
 
