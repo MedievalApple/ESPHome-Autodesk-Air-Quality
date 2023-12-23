@@ -2,7 +2,7 @@
 #include "esphome/core/log.h"
 
 namespace esphome {
-namespace autodesk_air_quality {
+namespace pm1006 {
 
 static const char *const TAG = "pm1006";
 
