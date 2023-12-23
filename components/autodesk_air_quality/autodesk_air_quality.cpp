@@ -1,4 +1,4 @@
-#include "airquality.h"
+#include "autodesk_air_quality.h"
 #include "esphome/core/log.h"
 
 namespace esphome {
